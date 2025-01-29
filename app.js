@@ -8,7 +8,13 @@ form.addEventListener('submit',(e)=>{
     let query=input.value;
     // console.log(query)
     movieApi(query)
+    input.value=""
 
+})
+input.addEventListener('keypress' ,(event)=>{
+// console.log(event);
+form.click()
+ 
 })
 
 async function movieApi(query) {
@@ -39,6 +45,7 @@ function movieimage(movies){
         let moviesrc=movie.Poster
         // console.log(src)
         let img=document.createElement('img')
+        img.classList.add("card")
         img.src=moviesrc;
         container.appendChild(img)
     }
