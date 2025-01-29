@@ -19,7 +19,7 @@ form.click()
 
 async function movieApi(query) {
     try{
-        let req=await fetch(`http://www.omdbapi.com/?s=${query}&apikey=3461ef5d`)
+        let req=await fetch(`https://www.omdbapi.com/?s=${query}&apikey=3461ef5d`)
         let movies=await req.json()
         console.log(movies)
         if(movies.Response){
